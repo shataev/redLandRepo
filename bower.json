@@ -1,0 +1,21 @@
+{
+  "name": "red_landing",
+  "description": "just landing",
+  "main": "index.js",
+  "authors": [
+    "wannaweed"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/shataev/redLandRepo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.8.1",
+    "bootstrap": "^4.0.0"
+  }
+}
