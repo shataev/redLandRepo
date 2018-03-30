@@ -9676,6 +9676,96 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 30px;
 }
 
+.blog-post-article {
+  margin-bottom: 75px;
+}
+
+.blog-post-image-box {
+  padding-left: 0;
+  overflow: hidden;
+}
+
+.blog-post-image-box .blog-post-img {
+  width: 100%;
+}
+
+.blog-post-info-container {
+  padding-right: 0;
+}
+
+.blog-post-info-container .blog-post-title {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.blog-post-info-container .blog-post-date-wrapper {
+  display: flex;
+  align-items: center;
+  width: 76px;
+  height: 76px;
+  margin-right: 25px;
+  background-color: #f7f7f7;
+  border: 2px solid #555;
+  font-size: 24px;
+  letter-spacing: 2px;
+  line-height: 20px;
+  color: #777;
+  font-family: "Montserrat";
+  font-weight: bold;
+  text-align: center;
+}
+
+.blog-post-info-container .blog-post-heading-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.blog-post-info-container .blog-post-heading-wrapper .blog-post-heading {
+  color: #555;
+  font-weight: 600;
+}
+
+.blog-post-info-container .blog-post-heading-wrapper .blog-post-heading:hover {
+  color: #c0301c;
+  text-decoration: none;
+}
+
+.blog-post-info-container .blog-post-author-box {
+  font-style: italic;
+  color: #777;
+}
+
+.blog-post-info-container .blog-post-author-box .blog-post-author,
+.blog-post-info-container .blog-post-author-box .blog-post-theme {
+  color: #777;
+}
+
+.blog-post-info-container .blog-post-author-box .blog-post-author:hover,
+.blog-post-info-container .blog-post-author-box .blog-post-theme:hover {
+  color: #dc3a0d;
+  text-decoration: none;
+}
+
+.blog-post-info-container .blog-post-text {
+  font-size: 14px;
+  line-height: 24px;
+  color: #555;
+  margin-bottom: 55px;
+}
+
+.blog-post-info-container .blog-post-read-more {
+  font-size: 13px;
+  font-weight: 600;
+  color: #777;
+}
+
+.blog-post-info-container .blog-post-read-more:hover {
+  text-decoration: none;
+  color: #c0301c;
+}
+
 
 
 
