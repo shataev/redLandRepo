@@ -9653,7 +9653,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .works-thumbs-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
@@ -9764,6 +9764,100 @@ a.text-dark:hover, a.text-dark:focus {
 .blog-post-info-container .blog-post-read-more:hover {
   text-decoration: none;
   color: #c0301c;
+}
+
+.clients-section {
+  background: #f8f8f8;
+}
+
+.clients-section .client-logos-container.client-logos-list {
+  padding: 0;
+  margin: 0 0 60px 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients-section .client-logos-container.client-logos-list .client-logos-item {
+  flex-grow: 1;
+  max-width: 160px;
+  height: 50px;
+  background-image: url("./../img/clients-logos.png");
+  background-repeat: no-repeat;
+}
+
+.clients-section .client-logos-container.client-logos-list .client-logos-item.deorham-logo {
+  background-position: 4px -9px;
+}
+
+.clients-section .client-logos-container.client-logos-list .client-logos-item.ratings-logo {
+  background-position: -185px -9px;
+}
+
+.clients-section .client-logos-container.client-logos-list .client-logos-item.malikmedia-logo {
+  background-position: -380px -9px;
+}
+
+.clients-section .client-logos-container.client-logos-list .client-logos-item.bcause-logo {
+  background-position: -566px -9px;
+}
+
+.clients-section .client-logos-container.client-logos-list .client-logos-item.wongiby-logo {
+  background-position: -758px -9px;
+}
+
+.clients-section .clients-review-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clients-section .clients-review-container .clients-review-list {
+  margin: 0 65px 35px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  color: #555;
+}
+
+.clients-section .clients-review-container .clients-review-list .clients-review-item {
+  min-width: 100%;
+}
+
+.clients-section .clients-review-container .clients-review-list .clients-review-item.is-active {
+  order: -1;
+}
+
+.clients-section .clients-review-container .clients-review-list .clients-review-item .review-text {
+  height: 60px;
+  overflow: hidden;
+}
+
+.clients-section .clients-review-container .slide-toggler-container {
+  width: 70px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.clients-section .clients-review-container .slide-toggler-container .slide-toggle {
+  width: 13px;
+  height: 13px;
+  border-radius: 6px;
+  background: #ddd;
+  cursor: pointer;
+}
+
+.clients-section .clients-review-container .slide-toggler-container .slide-toggle.is-active {
+  background: #bf2f1b;
 }
 
 

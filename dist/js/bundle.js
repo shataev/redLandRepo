@@ -19928,6 +19928,52 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./src/js/clients-review-slider.js":
+/*!*****************************************!*\
+  !*** ./src/js/clients-review-slider.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = clientsReviewSlider;
+
+var _jquery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//todo
+function clientsReviewSlider(selector, data) {
+    if (data) {} else {
+        var $container = (0, _jquery2.default)(selector);
+
+        var $slideTogglers = $container.find('.slide-toggle');
+
+        $slideTogglers.on('click', function () {
+            if ((0, _jquery2.default)(this).hasClass('is-active')) return;
+
+            var $activeToggler = $container.find('.slide-toggle.is-active');
+            var slideNum = (0, _jquery2.default)(this).data('slide');
+            var $newCurrentSlide = $container.find('.clients-review-item[data-slide="' + slideNum + '"]');
+
+            $container.find('.clients-review-item.is-active').removeClass('is-active');
+            $activeToggler.removeClass('is-active');
+
+            (0, _jquery2.default)(this).addClass('is-active');
+            $newCurrentSlide.addClass('is-active');
+        });
+    }
+};
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -19954,11 +20000,17 @@ var _slickCarousel = __webpack_require__(/*! slick-carousel */ "./node_modules/s
 
 var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
 
+var _clientsReviewSlider = __webpack_require__(/*! ./clients-review-slider */ "./src/js/clients-review-slider.js");
+
+var _clientsReviewSlider2 = _interopRequireDefault(_clientsReviewSlider);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _jquery2.default)('.employees-slider').slick({
     slidesToShow: 4
 });
+
+(0, _clientsReviewSlider2.default)('.review-slider');
 
 /***/ }),
 

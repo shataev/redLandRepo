@@ -1,0 +1,78 @@
+/*Clients section*/
+
+.clients-section
+  background #f8f8f8
+
+  .client-logos-container.client-logos-list
+    padding 0
+    margin 0 0 60px 0
+    list-style none
+    display flex
+    justify-content space-between
+
+    .client-logos-item
+      flex-grow 1
+      max-width 160px
+      height 50px
+      background-image url('../img/clients-logos.png')
+      background-repeat no-repeat
+
+      &.deorham-logo
+        background-position 4px -9px
+      &.ratings-logo
+        background-position -185px -9px
+      &.malikmedia-logo
+        background-position -380px -9px
+      &.bcause-logo
+        background-position -566px -9px
+      &.wongiby-logo
+        background-position -758px -9px
+
+  .clients-review-container
+    display flex
+    flex-direction column
+    align-items center
+
+    .clients-review-list
+      margin 0 65px 35px
+      padding 0
+      list-style none
+      display flex
+      position relative
+      overflow hidden
+      top 0
+      text-align center
+      font-size 18px
+      line-height 30px
+      color #555
+
+      .clients-review-item
+        min-width 100%
+
+        &.is-active
+          order -1
+
+        .review-text
+          height 60px
+          overflow hidden
+
+
+    .slide-toggler-container
+      width 70px
+      display flex
+      justify-content space-around
+      padding 0px
+      margin 0px
+      list-style none
+
+      .slide-toggle
+        width 13px
+        height 13px
+        border-radius 6px
+        background: #dddddd
+        cursor pointer
+
+        &.is-active
+          background #bf2f1b
+
+/*Clients section end*/
