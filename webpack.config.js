@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: [
         './src/js/index.js',
-        './src/stylus/styles.styl'
+        './src/stylus/styles.styl',
     ],
     output: {
         filename: './js/bundle.js'
@@ -33,6 +33,16 @@ module.exports = {
                     }
                 ]
             },
+            //todo Разобраться со шрифтами
+            {
+                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {name: 'fonts/[name].[ext]'}
+                    }
+                ]
+            },
             {
                 test: /\.styl$/,
                 include: path.resolve(__dirname, 'src/stylus'),
@@ -43,21 +53,26 @@ module.exports = {
                             options: {
                                 sourceMap: true,
                                 minimize: false,
-                                url: false
+                                //url: true //не корректно работают ссылки при значении true
                             }
                         },
                         {
-                            loader: "resolve-url-loader"
+                            loader: "resolve-url-loader",
+                            options: {
+                                debug: true
+                            }
                         },
                         {
                             loader: "stylus-loader",
                             options: {
-                                sourceMap: true
+                                sourceMap: true,
+                                'resolve url': true,
+                                'include css': true
                             }
                         }
                     ]
                 })
-            },
+            }
         ]
     },
     plugins: [
