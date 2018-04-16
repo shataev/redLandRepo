@@ -9,7 +9,8 @@ module.exports = {
         './src/stylus/styles.styl',
     ],
     output: {
-        filename: './js/bundle.js'
+        filename: './js/bundle.js',
+        publicPath: "./../"
     },
     devtool: "source-map",
     module: {
@@ -25,21 +26,25 @@ module.exports = {
                 }
             },
             {
+                test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+                //exclude: [path.resolve(__dirname, "src/img")],
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'fonts/[name].[ext]'
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.(png|jpg|gif|svg)$/,
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {name: 'img/[name].[ext]'}
-                    }
-                ]
-            },
-            //todo Разобраться со шрифтами
-            {
-                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {name: 'fonts/[name].[ext]'}
+                        options: {
+                            name: 'img/[name].[ext]'
+                        }
                     }
                 ]
             },
