@@ -20121,7 +20121,6 @@ var Navbar = function () {
     _createClass(Navbar, [{
         key: 'makeMenuBrighter',
         value: function makeMenuBrighter() {
-            debugger;
             var self = this;
 
             (0, _jquery2.default)(window).on('scroll', function () {
@@ -20137,7 +20136,6 @@ var Navbar = function () {
 ;
 
 function toggleNavbarClass(navbarEl) {
-    debugger;
     var scrollPos = (0, _jquery2.default)(window).scrollTop();
 
     if (scrollPos > 0) {

@@ -7,7 +7,6 @@ class Navbar {
     }
 
     makeMenuBrighter(){
-        debugger;
         var self = this;
 
         $(window).on('scroll', function(){
@@ -19,7 +18,6 @@ class Navbar {
 
 
 function toggleNavbarClass(navbarEl){
-    debugger;
     var scrollPos = $(window).scrollTop();
 
     if (scrollPos > 0){

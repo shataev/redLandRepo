@@ -13323,6 +13323,15 @@ a.text-dark:focus {
   background-color: rgba(116,31,27,0.5);
 }
 
+.header .nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header .nav-link:hover {
+  color: #e6e5e5;
+}
+
 .home-section {
   position: relative;
   background-image: url(./../img/home-bg.png);
@@ -13388,6 +13397,15 @@ a.text-dark:focus {
 
 .header.navbar-custom.is-brighter {
   background-color: rgba(116,31,27,0.5);
+}
+
+.header .nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header .nav-link:hover {
+  color: #e6e5e5;
 }
 
 .home-section {
