@@ -8,16 +8,50 @@
 
   .logo
     font-family 'montserratbold'
+    text-align left
+
+    @media all and (max-width:992px)
+      text-align center
 
   &.navbar-custom.is-brighter
     background-color: rgba(116, 31, 27, 0.5);
 
-  .nav-link
-    font-family 'montserratregular'
-    color #ffffff
-    text-decoration none
+  .navigation-box
 
-    &:hover
-      color #e6e5e5
+    .menu-button-container
+      display none
+      text-align center
+      cursor pointer
+
+      @media all and (max-width:650px)
+        display block
+
+      .menu-button
+        &.is-opened-menu:before
+          content '\f00d'
+
+
+    .nav
+      float right
+
+      @media all and (max-width:992px)
+        float none
+
+      .nav-link
+        font-family 'montserratregular'
+        color #ffffff
+        text-decoration none
+
+        &:hover
+          color #e6e5e5
+
+      @media all and (max-width:650px)
+        display none
+        flex-direction column
+        text-align center
+
+        &.is-opened-menu
+          display flex
+
 
 /*Page Header end*/

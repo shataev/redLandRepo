@@ -9,6 +9,7 @@ var navbarElem = $('.navbar-custom');
 var headerNavbar = new Navbar(navbarElem);
 
 headerNavbar.makeMenuBrighter();
+headerNavbar.addShowMenuButtonHandler();
 
 
 $('.employees-slider').slick({
